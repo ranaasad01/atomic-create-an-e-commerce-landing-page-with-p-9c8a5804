@@ -220,7 +220,7 @@ function ProductCard({ product, index }: { product: typeof featuredProducts[0]; 
         className="relative overflow-hidden aspect-[4/5] bg-slate-50"
         data-atomic-id="axv46hd">
         <img
-          src={product.image}
+          src="https://titoaistorageaccount.blob.core.windows.net/titoai-storage/assets/9c8a5804-d5a0-4090-9783-ceef999da379/a492962085ac4967958cb24c61d01bbe.png?v=1783080248127"
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           data-atomic-id="a2mt99q" />
