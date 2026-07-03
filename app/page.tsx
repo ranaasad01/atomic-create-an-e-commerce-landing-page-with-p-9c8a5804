@@ -179,8 +179,8 @@ const stats = [
 
 function StarRating({ rating, count }: { rating: number; count: number }) {
   return (
-    <div className="flex items-center gap-1.5">
-      <div className="flex items-center gap-0.5">
+    <div className="flex items-center gap-1.5" data-atomic-id="amgf7s">
+      <div className="flex items-center gap-0.5" data-atomic-id="a1iyj497">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
@@ -192,7 +192,7 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
           />
         ))}
       </div>
-      <span className="text-xs text-slate-500 font-medium">
+      <span className="text-xs text-slate-500 font-medium" data-atomic-id="a136mujg">
         {rating.toFixed(1)} ({count})
       </span>
     </div>
@@ -216,12 +216,14 @@ function ProductCard({ product, index }: { product: typeof featuredProducts[0]; 
       className="group relative bg-white rounded-2xl overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-8px_rgba(0,0,0,0.10)] border border-black/5 flex flex-col"
     >
       {/* Image */}
-      <div className="relative overflow-hidden aspect-[4/5] bg-slate-50">
+      <div
+        className="relative overflow-hidden aspect-[4/5] bg-slate-50"
+        data-atomic-id="axv46hd">
         <img
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+          data-atomic-id="a2mt99q" />
         {/* Badge */}
         {product.badge && (
           <span
@@ -234,7 +236,7 @@ function ProductCard({ product, index }: { product: typeof featuredProducts[0]; 
                 ? "bg-amber-500 text-white"
                 : "bg-slate-900 text-white"
             }`}
-          >
+            data-atomic-id="a1byi2er">
             {product.badge}
           </span>
         )}
@@ -253,32 +255,38 @@ function ProductCard({ product, index }: { product: typeof featuredProducts[0]; 
           />
         </motion.button>
         {/* Color swatches */}
-        <div className="absolute bottom-3 left-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <div
+          className="absolute bottom-3 left-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          data-atomic-id="ag5i0h3">
           {product.colors.map((color, i) => (
             <span
               key={i}
               className="w-4 h-4 rounded-full border-2 border-white shadow-sm"
               style={{ backgroundColor: color }}
-            />
+              data-atomic-id="aovf878"
+              data-atomic-instance={i} />
           ))}
         </div>
       </div>
-
       {/* Info */}
-      <div className="p-4 flex flex-col gap-2 flex-1">
-        <p className="text-xs font-medium text-indigo-600 uppercase tracking-wider">
+      <div className="p-4 flex flex-col gap-2 flex-1" data-atomic-id="axxxuqd">
+        <p
+          className="text-xs font-medium text-indigo-600 uppercase tracking-wider"
+          data-atomic-id="a1apsmv9">
           {product.category}
         </p>
-        <h3 className="text-sm font-semibold text-slate-900 leading-snug">
+        <h3
+          className="text-sm font-semibold text-slate-900 leading-snug"
+          data-atomic-id="a1dzxcgi">
           {product.name}
         </h3>
         <StarRating rating={product.rating} count={product.reviews} />
-        <div className="flex items-center gap-2 mt-auto pt-1">
-          <span className="text-base font-bold text-slate-900">
+        <div className="flex items-center gap-2 mt-auto pt-1" data-atomic-id="agass1q">
+          <span className="text-base font-bold text-slate-900" data-atomic-id="a1qvdihc">
             ${product.price}
           </span>
           {product.originalPrice && (
-            <span className="text-sm text-slate-400 line-through">
+            <span className="text-sm text-slate-400 line-through" data-atomic-id="a52hg8u">
               ${product.originalPrice}
             </span>
           )}
@@ -326,19 +334,27 @@ export default function HomePage() {
   };
 
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden" data-atomic-id="a8mzbt1">
       {/* ── Hero ── */}
-      <section className="relative min-h-[92vh] flex items-center bg-[#FAF8F5]">
+      <section
+        className="relative min-h-[92vh] flex items-center bg-[#FAF8F5]"
+        data-atomic-id="aqp6m0q">
         {/* Subtle radial glow */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 overflow-hidden"
-        >
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-indigo-100/60 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-amber-50/80 blur-3xl" />
+          data-atomic-id="ad5pi99">
+          <div
+            className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-indigo-100/60 blur-3xl"
+            data-atomic-id="azx7nio" />
+          <div
+            className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-amber-50/80 blur-3xl"
+            data-atomic-id="azymhn6" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center"
+          data-atomic-id="ad74cdr">
           {/* Left copy */}
           <motion.div
             variants={staggerContainer}
@@ -359,8 +375,8 @@ export default function HomePage() {
               className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.05] text-balance"
             >
               Goods Worth
-              <br />
-              <span className="text-indigo-600">Keeping.</span>
+              <br data-atomic-id="aqv30y5" />
+              <span className="text-indigo-600" data-atomic-id="a1pw7v8t">Keeping.</span>
             </motion.h1>
 
             <motion.p
@@ -409,16 +425,24 @@ export default function HomePage() {
               variants={fadeInUp}
               className="flex flex-wrap items-center gap-6 pt-4 border-t border-slate-200"
             >
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col">
-                  <span className="text-2xl font-bold text-slate-900 tracking-tight">
-                    {stat.value}
-                  </span>
-                  <span className="text-xs text-slate-500 font-medium">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
+              {stats.map((stat, __atomicIdx) => (<div
+                key={stat.label}
+                className="flex flex-col"
+                data-atomic-id="awxt7yu"
+                data-atomic-instance={__atomicIdx}>
+                <span
+                  className="text-2xl font-bold text-slate-900 tracking-tight"
+                  data-atomic-id="a12wx27c"
+                  data-atomic-instance={__atomicIdx}>
+                  {stat.value}
+                </span>
+                <span
+                  className="text-xs text-slate-500 font-medium"
+                  data-atomic-id="a147iobu"
+                  data-atomic-instance={__atomicIdx}>
+                  {stat.label}
+                </span>
+              </div>))}
             </motion.div>
           </motion.div>
 
@@ -437,7 +461,7 @@ export default function HomePage() {
                 src="https://images.squarespace-cdn.com/content/v1/527877e1e4b0d495e4b9f61d/1416344479470-7L8LWQZTNQ37QROU5U4R/image-asset.jpeg"
                 alt="Lumière curated collection"
                 className="w-full h-full object-cover"
-              />
+                data-atomic-id="a1cylbeg" />
             </motion.div>
             <motion.div
               variants={scaleIn}
@@ -447,7 +471,7 @@ export default function HomePage() {
                 src="https://thegiftgalashop.com/cdn/shop/products/amber-jar-soy-candle-handmade-soy-candles-soy-candle-thegiftgalashop-170915.jpg?v=1774114934"
                 alt="Handcrafted soy candle"
                 className="w-full h-full object-cover"
-              />
+                data-atomic-id="a1jqgvqy" />
             </motion.div>
             <motion.div
               variants={scaleIn}
@@ -457,15 +481,16 @@ export default function HomePage() {
                 src="https://assets.weimgs.com/weimgs/rk/images/wcm/products/202620/0006/pure-white-matte-ceramic-vases-c.jpg"
                 alt="Matte ceramic vase"
                 className="w-full h-full object-cover"
-              />
+                data-atomic-id="a1qicg3g" />
             </motion.div>
           </motion.div>
         </div>
       </section>
-
       {/* ── Categories ── */}
-      <section id="categories" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="categories" className="py-24 bg-white" data-atomic-id="adx5am6">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          data-atomic-id="aqo1str">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -474,20 +499,26 @@ export default function HomePage() {
             className="flex flex-col gap-12"
           >
             <motion.div variants={fadeInUp} className="flex flex-col gap-3 max-w-xl">
-              <span className="text-xs font-semibold uppercase tracking-widest text-indigo-600">
+              <span
+                className="text-xs font-semibold uppercase tracking-widest text-indigo-600"
+                data-atomic-id="ai03wiv">
                 Browse by Category
               </span>
-              <h2 className="text-4xl font-bold tracking-tight text-slate-900 text-balance">
+              <h2
+                className="text-4xl font-bold tracking-tight text-slate-900 text-balance"
+                data-atomic-id="aiv8w41">
                 Find Your Perfect Collection
               </h2>
-              <p className="text-slate-500 leading-relaxed">
+              <p className="text-slate-500 leading-relaxed" data-atomic-id="am3gtft">
                 From refined apparel to artisan home goods, every category is
                 curated with the same commitment to quality.
               </p>
             </motion.div>
 
             {/* Asymmetric grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div
+              className="grid grid-cols-2 lg:grid-cols-4 gap-4"
+              data-atomic-id="a1gw5r15">
               {categories.map((cat, i) => (
                 <motion.a
                   key={cat.id}
@@ -507,16 +538,32 @@ export default function HomePage() {
                     src={cat.image}
                     alt={cat.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <p className="text-white font-bold text-lg leading-tight">
+                    data-atomic-id="acy7uv8"
+                    data-atomic-instance={i} />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"
+                    data-atomic-id="aczmkp8"
+                    data-atomic-instance={i} />
+                  <div
+                    className="absolute bottom-0 left-0 p-5"
+                    data-atomic-id="ad11etq"
+                    data-atomic-instance={i}>
+                    <p
+                      className="text-white font-bold text-lg leading-tight"
+                      data-atomic-id="a7gkbj2"
+                      data-atomic-instance={i}>
                       {cat.name}
                     </p>
-                    <p className="text-white/70 text-sm mt-0.5">
+                    <p
+                      className="text-white/70 text-sm mt-0.5"
+                      data-atomic-id="a7gkd7k"
+                      data-atomic-instance={i}>
                       {cat.description}
                     </p>
-                    <p className="text-indigo-300 text-xs font-medium mt-1">
+                    <p
+                      className="text-indigo-300 text-xs font-medium mt-1"
+                      data-atomic-id="a7gkew2"
+                      data-atomic-instance={i}>
                       {cat.count} items
                     </p>
                   </div>
@@ -526,10 +573,11 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Featured Products ── */}
-      <section id="products" className="py-24 bg-[#FAF8F5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="products" className="py-24 bg-[#FAF8F5]" data-atomic-id="a9npdt5">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a82ai9m">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -541,14 +589,18 @@ export default function HomePage() {
               variants={fadeInUp}
               className="flex flex-col sm:flex-row sm:items-end justify-between gap-4"
             >
-              <div className="flex flex-col gap-3 max-w-xl">
-                <span className="text-xs font-semibold uppercase tracking-widest text-indigo-600">
+              <div className="flex flex-col gap-3 max-w-xl" data-atomic-id="a1tz8tb7">
+                <span
+                  className="text-xs font-semibold uppercase tracking-widest text-indigo-600"
+                  data-atomic-id="adn56lx">
                   Featured Products
                 </span>
-                <h2 className="text-4xl font-bold tracking-tight text-slate-900 text-balance">
+                <h2
+                  className="text-4xl font-bold tracking-tight text-slate-900 text-balance"
+                  data-atomic-id="a1sbqyjj">
                   Handpicked for This Season
                 </h2>
-                <p className="text-slate-500 leading-relaxed">
+                <p className="text-slate-500 leading-relaxed" data-atomic-id="a1q7uhhz">
                   Our editors select the finest pieces each season. These are
                   the items worth adding to your life.
                 </p>
@@ -582,10 +634,13 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Value Props ── */}
-      <section className="py-20 bg-white border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="py-20 bg-white border-y border-slate-100"
+        data-atomic-id="a1vws4dp">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          data-atomic-id="alm1mym">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -593,7 +648,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-80px" }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {valueProps.map((vp) => {
+            {valueProps.map((vp, __atomicIdx) => {
               const Icon = vp.icon;
               return (
                 <motion.div
@@ -601,14 +656,26 @@ export default function HomePage() {
                   variants={fadeInUp}
                   className="flex flex-col gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-indigo-100 hover:bg-indigo-50/30 transition-all duration-300"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-indigo-100 flex items-center justify-center">
+                  <div
+                    className="w-11 h-11 rounded-xl bg-indigo-100 flex items-center justify-center"
+                    data-atomic-id="apj2ub0"
+                    data-atomic-instance={__atomicIdx}>
                     <Icon className="w-5 h-5 text-indigo-600" />
                   </div>
-                  <div className="flex flex-col gap-1.5">
-                    <h3 className="text-sm font-bold text-slate-900">
+                  <div
+                    className="flex flex-col gap-1.5"
+                    data-atomic-id="apkhofi"
+                    data-atomic-instance={__atomicIdx}>
+                    <h3
+                      className="text-sm font-bold text-slate-900"
+                      data-atomic-id="a13wsw6h"
+                      data-atomic-instance={__atomicIdx}>
                       {vp.title}
                     </h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">
+                    <p
+                      className="text-sm text-slate-500 leading-relaxed"
+                      data-atomic-id="a3d11mo"
+                      data-atomic-instance={__atomicIdx}>
                       {vp.description}
                     </p>
                   </div>
@@ -618,11 +685,14 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── About / Brand Story ── */}
-      <section id="about" className="py-24 bg-[#FAF8F5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section id="about" className="py-24 bg-[#FAF8F5]" data-atomic-id="a1j4qsz5">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          data-atomic-id="az5srnm">
+          <div
+            className="grid lg:grid-cols-2 gap-16 items-center"
+            data-atomic-id="acyt3wl">
             {/* Image side */}
             <motion.div
               variants={slideInLeft}
@@ -631,12 +701,14 @@ export default function HomePage() {
               viewport={{ once: true, margin: "-80px" }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_8px_40px_rgba(0,0,0,0.12)] border border-black/5">
+              <div
+                className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-[0_8px_40px_rgba(0,0,0,0.12)] border border-black/5"
+                data-atomic-id="a8lqsrx">
                 <img
-                  src="https://lumierecreation.com/cdn/shop/files/cutting.jpg?v=1744649523&width=3840"
+                  src="https://titoaistorageaccount.blob.core.windows.net/titoai-storage/assets/9c8a5804-d5a0-4090-9783-ceef999da379/8028d83921c1476bb081645660262ec8.png?v=1783080107774"
                   alt="Artisan craftsmanship at Lumière"
                   className="w-full h-full object-cover"
-                />
+                  data-atomic-id="a4rr1u2" />
               </div>
               {/* Floating stat card */}
               <motion.div
@@ -646,11 +718,11 @@ export default function HomePage() {
                 transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
                 className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] border border-black/5 flex flex-col gap-1"
               >
-                <span className="text-3xl font-bold text-slate-900">12+</span>
-                <span className="text-sm text-slate-500 font-medium">
+                <span className="text-3xl font-bold text-slate-900" data-atomic-id="a10azber">12+</span>
+                <span className="text-sm text-slate-500 font-medium" data-atomic-id="a11lkxj9">
                   Years of Curation
                 </span>
-                <div className="flex items-center gap-1 mt-1">
+                <div className="flex items-center gap-1 mt-1" data-atomic-id="aiebqhk">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <Star key={s} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   ))}
@@ -704,18 +776,19 @@ export default function HomePage() {
                   "Ethically sourced from 30+ countries",
                   "Carbon-neutral shipping on every order",
                   "1% of revenue donated to artisan communities",
-                ].map((point) => (
-                  <motion.li
-                    key={point}
-                    variants={fadeInUp}
-                    className="flex items-center gap-3 text-sm text-slate-700 font-medium"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-indigo-600" />
-                    </span>
-                    {point}
-                  </motion.li>
-                ))}
+                ].map((point, __atomicIdx) => (<motion.li
+                  key={point}
+                  variants={fadeInUp}
+                  className="flex items-center gap-3 text-sm text-slate-700 font-medium"
+                >
+                  <span
+                    className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0"
+                    data-atomic-id="a1evtp3t"
+                    data-atomic-instance={__atomicIdx}>
+                    <Check className="w-3 h-3 text-indigo-600" />
+                  </span>
+                  {point}
+                </motion.li>))}
               </motion.ul>
               <motion.a
                 variants={fadeInUp}
@@ -735,10 +808,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ── Testimonials ── */}
-      <section className="py-24 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-slate-900" data-atomic-id="a4e1xzg">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a1jl0ud9">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -747,10 +821,14 @@ export default function HomePage() {
             className="flex flex-col gap-12"
           >
             <motion.div variants={fadeInUp} className="flex flex-col gap-3 max-w-xl">
-              <span className="text-xs font-semibold uppercase tracking-widest text-indigo-400">
+              <span
+                className="text-xs font-semibold uppercase tracking-widest text-indigo-400"
+                data-atomic-id="a19h8ygl">
                 Customer Stories
               </span>
-              <h2 className="text-4xl font-bold tracking-tight text-white text-balance">
+              <h2
+                className="text-4xl font-bold tracking-tight text-white text-balance"
+                data-atomic-id="a1ikky73">
                 Loved by People Who Value Quality
               </h2>
             </motion.div>
@@ -772,27 +850,49 @@ export default function HomePage() {
                     i === 1 ? "md:mt-6" : ""
                   }`}
                 >
-                  <div className="flex items-center gap-0.5">
+                  <div
+                    className="flex items-center gap-0.5"
+                    data-atomic-id="ayakvo6"
+                    data-atomic-instance={i}>
                     {[1, 2, 3, 4, 5].map((s) => (
                       <Star key={s} className="w-4 h-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <p className="text-slate-300 leading-relaxed text-sm text-pretty">
+                  <p
+                    className="text-slate-300 leading-relaxed text-sm text-pretty"
+                    data-atomic-id="a156sylh"
+                    data-atomic-instance={i}>
                     &ldquo;{t.text}&rdquo;
                   </p>
-                  <div className="flex items-center gap-3 pt-2 border-t border-white/10">
-                    <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 flex-shrink-0 bg-slate-700">
+                  <div
+                    className="flex items-center gap-3 pt-2 border-t border-white/10"
+                    data-atomic-id="aydejx6"
+                    data-atomic-instance={i}>
+                    <div
+                      className="w-10 h-10 rounded-full overflow-hidden border border-white/10 flex-shrink-0 bg-slate-700"
+                      data-atomic-id="a42zf4t"
+                      data-atomic-instance={i}>
                       <img
                         src={t.avatar}
                         alt={t.name}
                         className="w-full h-full object-cover"
-                      />
+                        data-atomic-id="a1429wl6"
+                        data-atomic-instance={i} />
                     </div>
-                    <div>
-                      <p className="text-white font-semibold text-sm">{t.name}</p>
-                      <p className="text-slate-500 text-xs">{t.location}</p>
+                    <div data-atomic-id="a44e99b" data-atomic-instance={i}>
+                      <p
+                        className="text-white font-semibold text-sm"
+                        data-atomic-id="ameyftb"
+                        data-atomic-instance={i}>{t.name}</p>
+                      <p
+                        className="text-slate-500 text-xs"
+                        data-atomic-id="ameyhht"
+                        data-atomic-instance={i}>{t.location}</p>
                     </div>
-                    <span className="ml-auto text-xs text-indigo-400 font-medium bg-indigo-400/10 px-2.5 py-1 rounded-full border border-indigo-400/20">
+                    <span
+                      className="ml-auto text-xs text-indigo-400 font-medium bg-indigo-400/10 px-2.5 py-1 rounded-full border border-indigo-400/20"
+                      data-atomic-id="a1uavr1s"
+                      data-atomic-instance={i}>
                       {t.product}
                     </span>
                   </div>
@@ -802,10 +902,11 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── Newsletter CTA ── */}
-      <section id="newsletter" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="newsletter" className="py-24 bg-white" data-atomic-id="a1qn4ok0">
+        <div
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          data-atomic-id="a1x4rz29">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -817,22 +918,32 @@ export default function HomePage() {
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 overflow-hidden"
-            >
-              <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/10 blur-3xl" />
-              <div className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-indigo-400/30 blur-2xl" />
+              data-atomic-id="ahhtj1l">
+              <div
+                className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/10 blur-3xl"
+                data-atomic-id="az9pw0c" />
+              <div
+                className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-indigo-400/30 blur-2xl"
+                data-atomic-id="azb4q4u" />
             </div>
 
             <motion.div
               variants={slideInLeft}
               className="relative flex flex-col gap-4 max-w-lg"
             >
-              <span className="text-xs font-semibold uppercase tracking-widest text-indigo-200">
+              <span
+                className="text-xs font-semibold uppercase tracking-widest text-indigo-200"
+                data-atomic-id="a11vunlp">
                 Stay in the Loop
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-balance">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-white tracking-tight text-balance"
+                data-atomic-id="a1666pif">
                 New Arrivals, Early Access, and Members-Only Offers.
               </h2>
-              <p className="text-indigo-200 leading-relaxed text-pretty">
+              <p
+                className="text-indigo-200 leading-relaxed text-pretty"
+                data-atomic-id="aveuc0v">
                 Join over 40,000 discerning shoppers who receive our curated
                 picks and exclusive discounts before anyone else.
               </p>
@@ -848,11 +959,13 @@ export default function HomePage() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center gap-3 bg-white/10 border border-white/20 rounded-2xl p-8 text-center"
                 >
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                  <div
+                    className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center"
+                    data-atomic-id="aigk6g6">
                     <Check className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-white font-bold text-lg">You are in.</p>
-                  <p className="text-indigo-200 text-sm">
+                  <p className="text-white font-bold text-lg" data-atomic-id="a2yjqt">You are in.</p>
+                  <p className="text-indigo-200 text-sm" data-atomic-id="a2ylfb">
                     Welcome to the Lumière community. Watch your inbox for
                     something special.
                   </p>
@@ -861,7 +974,7 @@ export default function HomePage() {
                 <form
                   onSubmit={handleSubscribe}
                   className="flex flex-col sm:flex-row gap-3"
-                >
+                  data-atomic-id="a6ry1rj">
                   <input
                     type="email"
                     value={email}
@@ -869,7 +982,7 @@ export default function HomePage() {
                     placeholder="Your email address"
                     required
                     className="flex-1 px-5 py-3.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-indigo-300 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white/40 focus:bg-white/15 transition-all duration-200"
-                  />
+                    data-atomic-id="a7l37ou" />
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.03 }}
@@ -880,7 +993,9 @@ export default function HomePage() {
                   </motion.button>
                 </form>
               )}
-              <p className="text-indigo-300 text-xs mt-3 text-center">
+              <p
+                className="text-indigo-300 text-xs mt-3 text-center"
+                data-atomic-id="a1saisyn">
                 No spam, ever. Unsubscribe at any time.
               </p>
             </motion.div>
