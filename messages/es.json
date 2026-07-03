@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "badge": "Nueva Temporada",
+    "home": "Inicio",
+    "shop": "Tienda",
+    "collections": "Colecciones",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "cart": "Carrito de compras",
+    "cta": "Comprar Ahora",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "footer": {
+    "brandDesc": "Productos cuidadosamente seleccionados para quienes aprecian la calidad, la artesanía y el diseño atemporal.",
+    "browseAll": "Ver todos los productos",
+    "shop": "Tienda",
+    "newArrivals": "Nuevas Llegadas",
+    "bestsellers": "Más Vendidos",
+    "sale": "Rebajas",
+    "collections": "Colecciones",
+    "company": "Empresa",
+    "about": "Acerca de Nosotros",
+    "careers": "Carreras",
+    "press": "Prensa",
+    "sustainability": "Sostenibilidad",
+    "support": "Soporte",
+    "contact": "Contáctenos",
+    "faq": "Preguntas Frecuentes",
+    "shipping": "Información de Envío",
+    "returns": "Devoluciones",
+    "copyright": "© {year} {brand}. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "cookies": "Política de Cookies"
+  }
+}

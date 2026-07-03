@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "badge": "New Season",
+    "home": "Home",
+    "shop": "Shop",
+    "collections": "Collections",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Shopping cart",
+    "cta": "Shop Now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "brandDesc": "Thoughtfully curated products for those who appreciate quality, craft, and timeless design.",
+    "browseAll": "Browse all products",
+    "shop": "Shop",
+    "newArrivals": "New Arrivals",
+    "bestsellers": "Bestsellers",
+    "sale": "Sale",
+    "collections": "Collections",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "sustainability": "Sustainability",
+    "support": "Support",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "shipping": "Shipping Info",
+    "returns": "Returns",
+    "copyright": "© {year} {brand}. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  }
+}
